@@ -1,0 +1,34 @@
+<SimpleWidget>
+    orientation: "vertical"
+
+    TextInput:
+        id: input_box
+        text: "0"
+        size_hint: None, None
+        size: 50, 30
+        multiline: False
+        halign: "center"
+        size_hint: (1, 0.19)
+        background_color: (20/255, 20/255, 30/255, 1)
+        foreground_color: (1, 1, 1, 1)
+        pos: 420, 450
+
+    Button:
+        text: 'Generate XOSC'
+        font_size: 12
+        background_color: 'grey'
+        size_hint: None, None
+        size: 100, 30
+        pos: 620, 10
+        on_press: app.generate_xosc()
+
+<MainScreen>
+    background_color: (20/255, 20/255, 30/255, 1)
+    foreground_color: (1, 1, 1, 1)
+    BoxLayout:
+        SimpleWidget:
+            text: 'Train & Model'
+            background_color: 'red'
+            font_size: 14
+            
+            
